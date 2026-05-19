@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+ <meta charset="UTF-8">
+ <title>智慧导诊 - AI智能就医服务</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+ *{
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+     font-family:"Microsoft YaHei",system-ui,sans-serif;
+ }
+ body{
+     background:linear-gradient(160deg,#f6faf9,#edf5f2);
+     min-height:100vh;
+     padding:40px 20px;
+ }
+ .container{
+     max-width:760px;
+     margin:0 auto;
+     background:#ffffff;
+     border-radius:28px;
+     padding:42px;
+     box-shadow:0 8px 30px rgba(27,120,80,0.08);
+     overflow:hidden;
+     position:relative;
+ }
+ /* 顶部渐变彩条 */
+ .container::before{
+     content:"";
+     position:absolute;
+     top:0;
+     left:0;
+     width:100%;
+     height:6px;
+     background:linear-gradient(90deg,#1a9b5e,#22b873);
+ }
+ /* 返回按钮 */
+ .back{
+     display:inline-flex;
+     align-items:center;
+     gap:8px;
+     color:#2d3436;
+     text-decoration:none;
+     font-size:18px;
+     margin-bottom:28px;
+     font-weight:500;
+     transition:all 0.3s ease;
+ }
+ .back:hover{
+     color:#1a9b5e;
+     transform:translateX(-4px);
+ }
+ /* 大标题 */
+ .title{
+     font-size:34px;
+     font-weight:700;
+     color:#1a2421;
+     margin-bottom:14px;
+     border-left:7px solid #1a9b5e;
+     padding-left:14px;
+     letter-spacing:1px;
+ }
+ .subtitle{
+     display:inline-block;
+     background:#eef4f1;
+     color:#57605c;
+     padding:6px 16px;
+     border-radius:16px;
+     font-size:14px;
+     margin-bottom:36px;
+ }
+ /* 顶部横幅介绍 */
+ .banner{
+     background:linear-gradient(135deg,#1a9b5e,#22b873);
+     color:#fff;
+     padding:22px;
+     border-radius:16px;
+     margin-bottom:32px;
+ }
+ .banner h4{
+     font-size:19px;
+     margin-bottom:8px;
+ }
+ .banner p{
+     opacity:0.92;
+     font-size:15px;
+     line-height:1.7;
+ }
+ /* 科室网格 */
+ .department-grid{
+     display:grid;
+     grid-template-columns:repeat(3,1fr);
+     gap:12px;
+     margin:26px 0;
+ }
+ .dep-card{
+     background:#f6faf9;
+     padding:16px;
+     border-radius:14px;
+     text-align:center;
+     transition:0.3s ease;
+ }
+ .dep-card:hover{
+     background:#e8f5f0;
+     transform:translateY(-3px);
+ }
+ .dep-card i{
+     font-size:24px;
+     color:#1a9b5e;
+     margin-bottom:8px;
+ }
+ .dep-card p{
+     font-size:14px;
+     color:#333;
+ }
+ /* 服务条目 */
+ .service-item{
+     display:flex;
+     align-items:flex-start;
+     gap:20px;
+     padding:26px 0;
+     border-bottom:1px solid #f0f3f1;
+     transition:all 0.3s ease;
+     border-radius:12px;
+     margin:0 -10px;
+     padding-left:10px;
+     padding-right:10px;
+ }
+ .service-item:hover{
+     background:#f6faf9;
+     transform:scale(1.01);
+ }
+ .service-item:last-child{
+     border-bottom:none;
+ }
+ /* 圆形图标盒子 */
+ .icon-box{
+     width:48px;
+     height:48px;
+     border-radius:50%;
+     background:linear-gradient(135deg,#1a9b5e,#22b873);
+     color:#fff;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     font-size:20px;
+     flex-shrink:0;
+     margin-top:4px;
+ }
+ .text{
+     flex:1;
+ }
+ .text h3{
+     font-size:20px;
+     margin-bottom:8px;
+     color:#222;
+     font-weight:600;
+ }
+ .text p{
+     color:#636e6a;
+     font-size:15px;
+     line-height:1.7;
+     margin-bottom:12px;
+ }
+ /* 标签组 */
+ .tag-group{
+     display:flex;
+     gap:8px;
+     flex-wrap:wrap;
+ }
+ .tag{
+     background:#e8f5f0;
+     color:#1a9b5e;
+     padding:4px 10px;
+     border-radius:12px;
+     font-size:12px;
+ }
+ /* 底部版权 */
+ .footer{
+     text-align:right;
+     margin-top:48px;
+     color:#95a5a1;
+     font-size:14px;
+ }
+ </style>
+ </head>
+ <body>
+ <div class="container">
+     <a href="1.html" class="back"><i class="fas fa-arrow-left"></i> 返回首页</a>
+     <div class="title">智慧导诊</div>
+     <div class="subtitle">AI智能分诊 · 科室精准匹配 · 院内导航服务</div>
+     <div class="banner">
+         <h4>🤖 人工智能智慧导诊系统</h4>
+         <p>智慧导诊依托人工智能大数据算法，为就诊患者提供智能症状分析、精准科室匹配、院内实时导航、一键预约挂号全流程服务，解决挂号迷茫、就医迷路、排队耗时等痛点。</p >
+     </div>
+     <div class="department-grid">
+         <div class="dep-card"><i class="fas fa-heartbeat"></i><p>内科</p ></div>
+         <div class="dep-card"><i class="fas fa-bone"></i><p>外科</p ></div>
+         <div class="dep-card"><i class="fas fa-baby"></i><p>儿科</p ></div>
+         <div class="dep-card"><i class="fas fa-female"></i><p>妇科</p ></div>
+         <div class="dep-card"><i class="fas fa-tooth"></i><p>口腔科</p ></div>
+         <div class="dep-card"><i class="fas fa-eye"></i><p>眼科</p ></div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-robot"></i></div>
+         <div class="text">
+             <h3>AI智能症状自动分析</h3>
+             <p>输入身体不适症状，AI自动识别风险等级，智能判断病因，精准推荐就诊科室，彻底告别挂错号、跑错科室的麻烦。</p >
+             <div class="tag-group">
+                 <span class="tag">智能识别</span>
+                 <span class="tag">秒级判断</span>
+                 <span class="tag">安全可靠</span>
+             </div>
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-location-arrow"></i></div>
+         <div class="text">
+             <h3>院内实时导航指路</h3>
+             <p>医院室内精准地图，自动规划最优路线，从医院大门直达诊室、检查室、药房，第一次就诊也不会迷路。</p >
+             <div class="tag-group">
+                 <span class="tag">室内导航</span>
+                 <span class="tag">路线规划</span>
+                 <span class="tag">零迷路</span>
+             </div>
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
+         <div class="text">
+             <h3>一键预约挂号服务</h3>
+             <p>导诊结束后直接预约对应科室医生，实时查看号源，手机完成挂号，减少现场排队时间。</p >
+             <div class="tag-group">
+                 <span class="tag">快速预约</span>
+                 <span class="tag">号源充足</span>
+                 <span class="tag">省时高效</span>
+             </div>
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-user-friends"></i></div>
+         <div class="text">
+             <h3>特殊人群专属陪护</h3>
+             <p>针对老人、孕妇、残障人士、行动不便患者提供全程就医引导、优先服务，让看病更省心、更暖心。</p >
+             <div class="tag-group">
+                 <span class="tag">暖心服务</span>
+                 <span class="tag">专人引导</span>
+                 <span class="tag">人文关怀</span>
+             </div>
+         </div>
+     </div>
+     <div class="footer">©人民当家作组 · 智慧医疗服务平台</div>
+ </div>
+ </body>
+ </html>

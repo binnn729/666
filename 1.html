@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>智慧中西医 | 健康服务平台</title>
+    <!-- Swiper 轮播图库 + Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+
+
+    <!-- ========== 顶部用户导航栏 ========== -->
+    <div class="top-navbar">
+        <ul class="nav-links">
+            <li class="active"><a href="#"><i class="fas fa-home"></i> 首页</a></li>
+            <li><a href="#service"><i class="fas fa-bolt"></i> 快捷服务</a></li>
+            <li><a href="#feature"><i class="fas fa-yin-yang"></i> 特色专区</a></li>
+            <li><a href="#science"><i class="fas fa-graduation-cap"></i> 科普专区</a></li>
+        </ul>
+        
+        <!-- 用户区域 -->
+        <div class="user-area" id="userArea">
+            <!-- 未登录状态 -->
+            <div id="notLoggedIn" style="display: flex;">
+                <a href="用户.html" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> 登录/注册
+                </a>
+            </div>
+            <!-- 登录后状态 -->
+            <div id="loggedIn" style="display: none;">
+                <div class="user-btn" id="userBtn">
+                    <img src="https://ui-avatars.com/api/?background=ffd966&color=1e4a34&bold=true&length=1&name=" alt="头像">
+                    <span id="userNameDisplay"></span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="user-name" id="dropdownUserName"></div>
+                
+                    <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> 退出登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-top" id="home">
+        <div class="title-section">
+            <h1>🌿 智能中西医·智慧医疗</h1>
+            <p>融汇中西 · 仁心济世</p>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="swiper-section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-1">
+                    <h3>🌱 中医智慧 × 现代科技</h3>
+                    <p>体质辨识 · 智能舌诊 · 经典名方数字化</p>
+                </div>
+                <div class="swiper-slide slide-2">
+                    <h3>💊 中西医结合优势病种</h3>
+                    <p>肿瘤康复 · 糖尿病逆转 · 慢性疼痛管理</p>
+                </div>
+                <div class="swiper-slide slide-3">
+                    <h3>📚 医学科普 全民共享</h3>
+                    <p>节气养生，经方故事，急救常识沉浸学</p>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 快捷服务入口 -->
+    <div class="section-title" id="service">
+        <i class="fas fa-bolt"></i>
+        <h2>快捷服务入口</h2>
+    </div>
+    <div class="service-grid">
+        <a href="西医诊疗.html" class="service-card"><i class="fas fa-stethoscope"></i><span>西医诊疗</span></a>
+        <a href="中西医结合.html" class="service-card"><i class="fas fa-hand-holding-heart"></i><span>中西医结合</span></a>
+        <a href="医疗服务专区.html" class="service-card"><i class="fas fa-hospital-user"></i><span>医疗服务专区</span></a>
+        <a href="中医养生.html" class="service-card"><i class="fas fa-hands-helping"></i><span>中医养生</span></a>
+        <a href="体检报告解读.html" class="service-card"><i class="fas fa-file-alt"></i><span>体检报告解读</span></a>
+    </div>
+
+
+    <!-- 中西医结合特色区 + 医学科普专区 -->
+    <div class="dual-section">
+        <div class="feature-box" id="feature">
+            <h3><i class="fas fa-yin-yang"></i> 中西医结合特色区</h3>
+            <div class="advantage-list">
+                <li><i class="fas fa-chart-line"></i> 中西医结合优势：增效减毒·缩短病程·改善预后</li>
+                <li><i class="fas fa-users"></i> 适用人群推荐：慢性病、术后康复、亚健康及疑难杂症</li>
+            </div>
+            <div class="tag-group">
+                <span class="tag">🔬 循证医学+辨证论治</span>
+                <span class="tag">🌾 经方现代化制剂</span>
+                <span class="tag">⚡ 针灸康复一体化</span>
+            </div>
+            <div style="margin-top: 20px; background: #eef1e6; border-radius: 28px; padding: 12px 16px;" >
+                 <h4>临床研究证实：</h4> 中西医结合治疗消化道肿瘤术后生活质量提升32%
+				 <h4>《中西医结合治疗糖尿病专家共识》</h4>发布首次纳入“糖尿病逆转”中医分期干预路径，全国多中心临床研究启动。
+            </div>
+        </div>
+        <div class="popular-science" id="science">
+            <h3><i class="fas fa-graduation-cap"></i> 医学科普专区</h3>
+            <div class="science-entries">
+                <a href="西医疾病科普.html" class="entry-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <div class="entry-text">
+                        <h4>西区疾病科普</h4>
+                        <p>高血压防治 · 糖尿病饮食地图 · 哮喘中西养护</p>
+                    </div>
+                </a>
+                <a href="中医文化科普.html" class="entry-item">
+                    <i class="fas fa-book-open"></i>
+                    <div class="entry-text">
+                        <h4>中医文化科普</h4>
+                        <p>《黄帝内经》养生智慧 · 中医典故与名家传奇</p>
+                    </div>
+                </a>
+                <a href="中西医结合专区.html" class="entry-item">
+                    <i class="fas fa-microscope"></i>
+                    <div class="entry-text">
+                        <h4>中西医结合专栏</h4>
+                        <p>如何看懂体检指标与体质分析？</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 额外服务条 -->
+    <div class="extra-services">
+        <a href="智能导诊下.html" class="extra-item"><i class="fas fa-map-marker-alt"></i> 医疗服务专区 · 智慧导诊</a>
+        <a href="在线问诊.html" class="extra-item"><i class="fas fa-video"></i> 西区在线问诊 · 专家面对面</a>
+        <a href="护理服务.html" class="extra-item"><i class="fas fa-hand-sparkles"></i> 护理服务 · 上门护理/安宁疗护</a>
+        <a href="体检报告解读（下）.html" class="extra-item"><i class="fas fa-chart-simple"></i> 体检报告解读 · AI辅助分析</a>
+    </div>
+
+    <!-- 版权 -->
+    <div class="footer-copyright">
+        <span>© 版权所有 人民当家作组</span>
+        <span>| 坚守中医传承 · 创新结合医学 |</span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

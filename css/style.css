@@ -1,0 +1,425 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, 'Segoe UI', 'PingFang SC', Roboto, sans-serif;
+        }
+        body {
+            background: #f4f9f4;
+        }
+        .app {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 18px 48px;
+            background: #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.02);
+        }
+        
+        /* ========== 新增：顶部用户导航栏 ========== */
+        .top-navbar {
+            background: linear-gradient(135deg, #1e4a34, #2b7a4b);
+            border-radius: 60px;
+            padding: 8px 20px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .nav-links li a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            color: #f0f7f3;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 60px;
+            transition: 0.2s;
+            font-size: 0.85rem;
+        }
+        .nav-links li a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .nav-links li.active a {
+            background: #ffd966;
+            color: #1e4a34;
+        }
+        
+        /* 用户区域 */
+        .user-area {
+            position: relative;
+        }
+        .user-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 60px;
+            padding: 6px 16px 6px 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: white;
+        }
+        .user-btn:hover {
+            background: rgba(255,255,255,0.28);
+        }
+        .user-btn img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #ffd966;
+            object-fit: cover;
+        }
+        .user-btn i {
+            font-size: 1.1rem;
+        }
+        .user-dropdown {
+            position: absolute;
+            right: 0;
+            top: 48px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            width: 200px;
+            display: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .user-dropdown.show {
+            display: block;
+        }
+        .user-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            color: #2c5a42;
+            text-decoration: none;
+            transition: 0.1s;
+            border-bottom: 1px solid #e2efdf;
+        }
+        .user-dropdown a:last-child {
+            border-bottom: none;
+        }
+        .user-dropdown a:hover {
+            background: #eef5f0;
+        }
+        .user-dropdown i {
+            width: 20px;
+            color: #2b7a4b;
+        }
+        .user-name {
+            padding: 12px 18px;
+            background: #eef5f0;
+            font-weight: 600;
+            color: #1e4a34;
+            border-bottom: 1px solid #ddebe0;
+        }
+        .login-btn {
+            background: #ffd966;
+            color: #1e4a34 !important;
+            padding: 8px 20px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .login-btn:hover {
+            background: #ffcd4a;
+        }
+
+       @media (max-width: 780px) {
+            .top-navbar {
+                flex-direction: column;
+                gap: 12px;
+                border-radius: 28px;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+        }
+        
+        /* 头部区域 */
+        .header-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #cbe6d9;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #2b7a4b, #4c9f70);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .title-section p {
+            font-size: 0.85rem;
+            color: #5a6e6b;
+            margin-top: 6px;
+        }
+        .info-badge {
+            display: flex;
+            gap: 24px;
+            background: #eef5f0;
+            padding: 8px 20px;
+            border-radius: 60px;
+        }
+        .info-badge span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d6a4f;
+        }
+        .info-badge i {
+            margin-right: 6px;
+            color: #40916c;
+        }
+        /* 轮播图区域 */
+        .swiper-section {
+            margin-bottom: 40px;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+        }
+        .swiper {
+            width: 100%;
+            height: auto;
+        }
+        .swiper-slide {
+            text-align: center;
+            padding: 48px 20px;
+            background-size: cover;
+        }
+        .slide-1 { background: linear-gradient(135deg, #e1f0e8, #c2e0d0); }
+        .slide-2 { background: linear-gradient(135deg, #fae6df, #ffe0d4); }
+        .slide-3 { background: linear-gradient(135deg, #e2eafc, #ccd9f0); }
+        .swiper-slide h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1f3b2c;
+        }
+        .swiper-slide p {
+            font-size: 1rem;
+            max-width: 80%;
+            margin: 0 auto;
+            color: #2c4b3e;
+            font-weight: 500;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #2b7a4b;
+            background: rgba(255,255,240,0.8);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            backdrop-filter: blur(4px);
+        }
+        .swiper-pagination-bullet-active {
+            background: #2b7a4b !important;
+        }
+        /* 快捷服务入口 */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 36px 0 20px 0;
+        }
+        .section-title h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1e4a34;
+        }
+        .section-title i {
+            font-size: 1.8rem;
+            color: #40916c;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 80px;
+            margin-bottom: 20px;
+        }
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e2f0e6;
+            border-radius: 26px;
+            padding: 18px 8px;
+            text-align: center;
+            transition: 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #9ec5ae;
+            background: #fafff7;
+            box-shadow: 0 12px 20px rgba(53, 94, 59, 0.08);
+        }
+        .service-card i {
+            font-size: 2.2rem;
+            color: #2b7a4b;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        .service-card span {
+            display: block;
+            font-weight: 600;
+            color: #2c5a42;
+            font-size: 0.9rem;
+        }
+
+        /* 中西医结合特色区 + 医学科普专区 双栏布局 */
+        .dual-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin: 40px 0 40px;
+        }
+        .feature-box, .popular-science {
+            flex: 1;
+            background: #fefef8;
+            border-radius: 32px;
+            padding: 24px 22px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2efdf;
+            transition: all 0.2s;
+        }
+        .feature-box h3, .popular-science h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2d6a4f;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 5px solid #4c9f70;
+            padding-left: 16px;
+            margin-bottom: 18px;
+        }
+        .advantage-list {
+            list-style: none;
+            margin: 16px 0;
+			cursor: pointer;
+        }
+        .advantage-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e3f0e5;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .advantage-list li i {
+            width: 28px;
+            color: #40916c;
+            font-size: 1.2rem;
+        }
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 22px 0 8px;
+        }
+        .tag {
+            background: #e6f2ec;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #226644;
+            cursor: pointer;
+        }
+        .science-entries {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .entry-item {
+            background: #f9fbf7;
+            border-radius: 20px;
+            padding: 14px 18px;
+            transition: 0.2s;
+            border: 1px solid #e1ecd9;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+        .entry-item:hover {
+            background: #f1f8ef;
+            transform: translateX(4px);
+        }
+        .entry-item i {
+            font-size: 1.8rem;
+            color: #589e7a;
+        }
+        .entry-text h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d4f3a;
+        }
+        .entry-text p {
+            font-size: 0.85rem;
+            color: #5e7b6e;
+        }
+        /* 额外服务栏 */
+        .extra-services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: #eaf4ed;
+            border-radius: 32px;
+            padding: 20px 26px;
+            margin: 20px 0 30px;
+            gap: 10px;
+        }
+        .extra-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            padding: 10px 22px;
+            border-radius: 60px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+            font-weight: 600;
+            color: #2f6b4a;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        .extra-item i {
+            font-size: 1.3rem;
+        }
+        .footer-copyright {
+            text-align: center;
+            margin-top: 52px;
+            padding-top: 20px;
+            border-top: 1px solid #ddebe0;
+            color: #6d8b7a;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 780px) {
+            .app { padding: 16px; }
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+            .info-badge { gap: 12px; flex-wrap: wrap; }
+            .section-title h2 { font-size: 1.3rem; }
+            .extra-services { flex-direction: column; align-items: stretch; }
+            .extra-item { justify-content: center; }
+        }

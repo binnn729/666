@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+ <meta charset="UTF-8">
+ <title>西区在线问诊 | 医疗服务专区</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+ *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",system-ui,sans-serif}
+ body{background:linear-gradient(160deg,#f5f8fc,#eef4fc);min-height:100vh;padding:40px 20px}
+ .container{max-width:760px;margin:0 auto;background:#ffffff;border-radius:28px;padding:42px;box-shadow:0 8px 30px rgba(25,85,155,0.08);overflow:hidden;position:relative}
+ .container::before{content:"";position:absolute;top:0;left:0;width:100%;height:6px;background:linear-gradient(90deg,#2563eb,#0ea5e9)}
+ .back{display:inline-flex;align-items:center;gap:8px;color:#2d3436;text-decoration:none;font-size:18px;margin-bottom:28px;font-weight:500;transition:all 0.3s ease}
+ .back:hover{color:#2563eb;transform:translateX(-4px)}
+ .title{font-size:34px;font-weight:700;color:#1a2421;margin-bottom:14px;border-left:7px solid #2563eb;padding-left:14px;letter-spacing:1px}
+ .subtitle{display:inline-block;background:#eef2f9;color:#57606e;padding:6px 16px;border-radius:16px;font-size:14px;margin-bottom:36px}
+ .banner{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;padding:22px;border-radius:16px;margin-bottom:32px}
+ .banner h4{font-size:19px;margin-bottom:8px}
+ .banner p{opacity:0.92;font-size:15px;line-height:1.7}
+ .service-item{display:flex;align-items:flex-start;gap:20px;padding:26px 0;border-bottom:1px solid #f0f3f9;transition:all 0.3s ease;border-radius:12px;margin:0 -10px;padding-left:10px;padding-right:10px}
+ .service-item:hover{background:#f5f8fc;transform:scale(1.01)}
+ .service-item:last-child{border-bottom:none}
+ .icon-box{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;margin-top:4px}
+ .text{flex:1}
+ .text h3{font-size:20px;margin-bottom:8px;color:#222;font-weight:600}
+ .text p{color:#636e7a;font-size:15px;line-height:1.7;margin-bottom:12px}
+ .tag-group{display:flex;gap:8px;flex-wrap:wrap}
+ .tag{background:#e8f1fc;color:#2563eb;padding:4px 10px;border-radius:12px;font-size:12px}
+ .doctor-show{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:24px 0}
+ .doctor-card{background:#f5f8fc;padding:16px;border-radius:14px;text-align:center;transition:0.3s ease}
+ .doctor-card:hover{background:#e8f1fc}
+ .doctor-card i{font-size:32px;color:#2563eb;margin-bottom:10px}
+ .doctor-card h4{font-size:16px;color:#222}
+ .doctor-card p{font-size:13px;color:#666;margin-top:4px}
+ .footer{text-align:right;margin-top:48px;color:#95a5b1;font-size:14px}
+ </style>
+ </head>
+ <body>
+ <div class="container">
+     <a href="1.html" class="back"><i class="fas fa-arrow-left"></i> 返回首页</a>
+     <a href="医疗服务专区.html" class="back"><i class="fas fa-arrow-left"></i> 返回上页</a>
+     <div class="title">西区在线问诊</div>
+     <div class="subtitle">三甲医院专家 · 线上全场景医疗服务</div>
+     <div class="banner">
+         <h4>💻 足不出户看名医 · 西区专属医疗资源</h4>
+         <p>汇聚西区多家三甲医院骨干医师，提供图文、语音、视频多形式问诊，常见病咨询、慢病复诊、用药指导、药品配送一站式服务，让优质医疗触手可及。</p >
+     </div>
+     <div class="doctor-show">
+         <div class="doctor-card">
+             <i class="fas fa-user-md"></i>
+             <h4>内科专家</h4>
+             <p>心脑血管、消化慢病</p >
+         </div>
+         <div class="doctor-card">
+             <i class="fas fa-female"></i>
+             <h4>妇科儿科</h4>
+             <p>母婴健康、儿童诊疗</p >
+         </div>
+         <div class="doctor-card">
+             <i class="fas fa-spa"></i>
+             <h4>中医专科</h4>
+             <p>体质调理、辨证施治</p >
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-comment-dots"></i></div>
+         <div class="text">
+             <h3>图文极速问诊</h3>
+             <p>文字描述症状、上传检查报告、患处照片，医生快速判断病情，给出用药、就医、护理建议，3分钟内响应，解决日常小病小痛。</p >
+             <div class="tag-group">
+                 <span class="tag">极速响应</span>
+                 <span class="tag">图文沟通</span>
+                 <span class="tag">低成本咨询</span>
+             </div>
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-phone-volume"></i></div>
+         <div class="text">
+             <h3>语音/视频专家问诊</h3>
+             <p>与西区三甲专家一对一视频沟通，适合复诊、术后康复、复杂症状描述，医生直观判断病情，制定精准治疗方案，如同面对面就诊。</p >
+             <div class="tag-group">
+                 <span class="tag">面对面问诊</span>
+                 <span class="tag">三甲医师</span>
+                 <span class="tag">隐私加密</span>
+             </div>
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-pills"></i></div>
+         <div class="text">
+             <h3>在线复诊 & 药品配送</h3>
+             <p>高血压、糖尿病等慢性病患者线上复诊，医生开具电子处方，药房直接配药，配送到家，无需往返医院，长期用药更省心。</p >
+             <div class="tag-group">
+                 <span class="tag">电子处方</span>
+                 <span class="tag">送药上门</span>
+                 <span class="tag">慢病专属</span>
+             </div>
+         </div>
+     </div>
+     <div class="service-item">
+         <div class="icon-box"><i class="fas fa-shield-halved"></i></div>
+         <div class="text">
+             <h3>西区专属就医绿色通道</h3>
+             <p>线上问诊后如需线下治疗，可直接预约西区合作医院号源，享受优先就诊、检查、住院服务，打通线上线下就医闭环。</p >
+             <div class="tag-group">
+                 <span class="tag">线上转线下</span>
+                 <span class="tag">优先就诊</span>
+                 <span class="tag">全程导诊</span>
+             </div>
+         </div>
+     </div>
+     <div class="footer">©人民当家作组</div>
+ </div>
+ </body>
+ </html>
